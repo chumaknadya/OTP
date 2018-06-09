@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>test</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: txt"><![CDATA[
+
+(test.story)
+Scenario: Expression with matrix
+Given matrixAnalyzer
+When matrix A=[[5,2],[1,4]]
+Then should equal [ 5.0 2.0 ][ 1.0 4.0 ]
+When matrix A
+When matrix [ 5.0 2.0 ][ 1.0 2.0 ]
+When matrix C=[[5,8].
+Then should equal null
+When matrix C=[[5]
+Then should equal String index out of range: 7
+When matrix 55=[[5,8]]
+Then should equal 55
+When matrix W
+When matrix Variable is not defined
+When matrix B=[[3,4],[5,8]]
+Then should equal [ 3.0 4.0 ][ 5.0 8.0 ]
+When matrix B^-1
+Then should equal [ 2.0 -1.0 ][ -1.25 0.75 ]
+When matrix A+B
+Then should equal [ 8.0 6.0 ][ 6.0 12.0 ]
+When matrix det(A)
+Then should equal 18.0
+
+Scenario: Expression with matrix operations
+When matrix det([[5,2],[1,4]]+[[3,4],[5,8]]^-1)
+Then should equal 33.5
+When matrix det(A+B^-1)
+Then should equal 33.5
+When matrix C=det(A+B^-1)
+Then should equal 33.5
+When matrix C
+Then should equal 33.5
+When matrix det([[8,9],[55,3]] + [[3,4],[5]^-1)
+Then should equal Invalid type.
+When matrix det(A+a^-1)
+Then should equal Variable is not defined
+
+
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

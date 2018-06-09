@@ -1,0 +1,15 @@
+\d%#,true
+\d~#,true
+\da#,true
+\ddddddddffff#,true
+\ddddddd%#,true
+\ddddd~#,true
+\daaaaaa#,true
+" ",false
+\dss,false
+d%#,false
+d\\d%#,false
+\d~#f,false
+\d%%%%#,false
+\d~~~#,false
+null,false

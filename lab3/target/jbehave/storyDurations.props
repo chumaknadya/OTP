@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Sat May 05 09:25:35 EEST 2018
+test.story=0
+threads=1
+total=0
+threadAverage=0
